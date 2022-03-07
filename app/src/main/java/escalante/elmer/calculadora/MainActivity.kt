@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
             tv_num1.setText("")
             tv_num2.setText("")
             numero1 = 0.0
-            numero2 = 0.0
             oper = 0
         }
     }
@@ -69,21 +68,21 @@ class MainActivity : AppCompatActivity() {
         numero1 = tv_num2.text.toString().toDouble()
         var num2_text: String = tv_num2.text.toString()
         tv_num2.setText("")
-        whem(view.id){
-            R.id.btnSuma ->{
+        when(view.id){
+            R.id.btnSumar ->{
                 tv_num1.setText(num2_text + "+")
                 oper = 1
         }
             R.id.btnRestar ->{
-                tb_num1.setText(num2_text + "-")
+                tv_num1.setText(num2_text + "-")
                 oper = 2
         }
             R.id.btnMultiplicar ->{
-                tv_num1.setText(num2_text + "*")
-                oper = 3
+                tv_num1.setText(num2_text + "/")
+                oper = 4
         }
             R.id.btnDividir ->{
-                tb_num1.setText(num2_text + "/")
+                tv_num1.setText(num2_text + "/")
                 oper = 4
         }
         }
